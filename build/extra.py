@@ -3,14 +3,15 @@ import json, os, re, html
 from render import mark
 
 OUT = "/home/claude/site"
-HEAD = open(f"{OUT}/index.html").read()
+SRC = open(f"{OUT}/story/index.html").read().replace('="../assets/', '="/assets/')
+HEAD = SRC
 STYLE_LINKS = """<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/tokens.css">
 <link rel="stylesheet" href="/assets/components.css">
-<link rel="stylesheet" href="/assets/site.css">"""
-FOOTER = re.search(r'<footer class="wd-footer".*?</footer>', HEAD, re.S).group(0)
-HEADER = f"""<header class="ws-head"><a class="ws-brand" href="/" aria-label="webdefy home">{mark('webdefy', 32, True)}</a>
-<nav aria-label="Main" class="ws-nav"><a href="/rewind">Rewind</a><a href="/work-with-us">Work with us</a><a href="/story">Story</a><a href="/contact">Contact</a></nav></header>"""
+<link rel="stylesheet" href="/assets/site.css">""" + "\n" + "\n".join(re.findall(r'<style[^>]*>.*?</style>', SRC, re.S))
+FOOTER = re.search(r'<div class="wh-wrap" style="padding-bottom: 32px">\s*<footer class="wd-footer".*?</footer>\s*</div>', SRC, re.S).group(0)
+HEADER = re.search(r'<header class="wh-wrap".*?</header>', SRC, re.S).group(0)
+BODY_OPEN = re.search(r'<body[^>]*>\s*(<div data-theme="webdefy"[^>]*>)', SRC, re.S).group(1)
 
 def page(path, title, desc, body, noindex=False):
     canon = "/" + path.replace("index.html", "").rstrip("/") if path != "404.html" else "/404"
@@ -28,11 +29,13 @@ def page(path, title, desc, body, noindex=False):
 {STYLE_LINKS}
 </head>
 <body data-theme="webdefy">
+{BODY_OPEN}
 {HEADER}
 <main class="ws-legal">
 {body}
 </main>
 {FOOTER}
+</div>
 </body>
 </html>
 """
