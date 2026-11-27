@@ -9,10 +9,10 @@ PAGES = {  # design file -> output path, canonical path
     "Home": ("index.html", "/"),
     "Story": ("story/index.html", "/story"),
     "Work": ("work/index.html", "/work"),
-    "WorkWithUs": ("work-with-us/index.html", "/work-with-us"),
+    "WorkWithUs": ("engagement-model/index.html", "/engagement-model"),
     "Contact": ("contact/index.html", "/contact"),
 }
-LINKMAP = {"Home.dc.html": "/", "Story.dc.html": "/story", "Work.dc.html": "/work", "WorkWithUs.dc.html": "/work-with-us",
+LINKMAP = {"Home.dc.html": "/", "Story.dc.html": "/story", "Work.dc.html": "/work", "WorkWithUs.dc.html": "/engagement-model",
            "Contact.dc.html": "/contact", "RewindProto.dc.html": "/rewind", "RewindYear.dc.html": "https://rewind.webdefy.com/2004"}
 
 LEAF = "M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z"
@@ -93,7 +93,7 @@ def render(node, scope, soup):
         if comp == "Button":
             v = a.get("variant", "cta"); c = f'wd-btn wd-btn--{v}' + (" wd-btn--sm" if a.get("size") == "sm" else "") + (" " + cls if cls else "")
             href = fix_href(a.get("href"))
-            if not href and "on-click" in node.attrs: href = "mailto:hello@webdefy.com?subject=Talk%20to%20Webdefy"
+            if not href and "on-click" in node.attrs: href = "mailto:hello@webdefy.com?subject=" + ("Free%20AI%20Advisory" if "advisory" in inner.lower() else "Talk%20to%20Webdefy")
             st = f' style="{a["style"]}"' if a.get("style") else ""
             if href: return [BeautifulSoup(f'<a class="{c}" href="{href}"{st}>{inner}</a>', "html.parser")]
             return [BeautifulSoup(f'<button type="button" class="{c}"{st}>{inner}</button>', "html.parser")]
@@ -219,7 +219,7 @@ META = {
     "Home": ("Webdefy: we grew up on the web. Now we rewind it.", "Webdefy builds AI products, starting with Rewind: the internet you grew up with, one year at a time. Plus governed AI rollout for business."),
     "Story": ("Our story · Webdefy", "Webdefy started young and creative in Chennai in 2012, built apps, websites, CRM and e-commerce, and is back as an AI-first studio."),
     "Work": ("Work · Webdefy", "Apps, websites, CRM and e-commerce platforms Webdefy has built for clients."),
-    "WorkWithUs": ("Work with us · Webdefy", "Governed AI rollout for business: agentic systems, LLMs, RAG, MCP and evals, built so they can be trusted."),
+    "WorkWithUs": ("Engagement model · Webdefy", "How we take AI from idea to production: a free AI Advisory to define the value, then fixed-quote phases to assess, pilot, run and govern."),
     "Contact": ("Get in touch · Webdefy", "Talk to Webdefy about Rewind, AI products or a governed AI rollout. hello@webdefy.com"),
 }
 if __name__ == "__main__":

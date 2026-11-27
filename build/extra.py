@@ -95,7 +95,7 @@ page("404.html", "Page not found · Webdefy", "This page doesn't exist.", """
 
 open(f"{OUT}/assets/favicon.svg", "w").write(mark("webdefy", 64).replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ').replace("var(--mark-edge)", "#ffbc06").replace("var(--mark-leaf)", "#16151a").replace("var(--mark-glyph)", "#ffffff"))
 
-urls = ["/", "/rewind", "/work-with-us", "/work", "/story", "/contact", "/privacy", "/terms"]
+urls = ["/", "/rewind", "/engagement-model", "/work", "/story", "/contact", "/privacy", "/terms"]
 open(f"{OUT}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>https://webdefy.com{u}</loc><lastmod>2026-11-27</lastmod></url>\n" for u in urls) + "</urlset>\n")
 open(f"{OUT}/robots.txt", "w").write("User-agent: *\nAllow: /\nDisallow: /thanks/\n\nSitemap: https://webdefy.com/sitemap.xml\n")
 open(f"{OUT}/llms.txt", "w").write("""# Webdefy
@@ -108,14 +108,14 @@ open(f"{OUT}/llms.txt", "w").write("""# Webdefy
 - AI E-com: coming soon.
 
 ## Services
-- [Governed AI Rollout for Business](https://webdefy.com/work-with-us): agentic systems, LLMs, RAG, MCP and evals, taken from pilot to production with a human in the loop.
+- [Governed AI Rollout for Business](https://webdefy.com/engagement-model): a free AI Advisory to define the value, then agentic systems, LLMs, RAG, MCP and evals, taken from pilot to production with a human in the loop.
 
 ## Company
 - [Story](https://webdefy.com/story)
 - [Work](https://webdefy.com/work): apps, websites, CRM and e-commerce platforms built for clients.
 - [Contact](https://webdefy.com/contact): hello@webdefy.com
 """)
-open(f"{OUT}/_redirects", "w").write("/home  /  301\n/about  /story  301\n/services  /work-with-us  301\n/clients  /work  301\n/start  /rewind  302\n")
+open(f"{OUT}/_redirects", "w").write("/home  /  301\n/about  /story  301\n/services  /engagement-model  301\n/work-with-us  /engagement-model  301\n/clients  /work  301\n/start  /rewind  302\n")
 open(f"{OUT}/netlify.toml", "w").write("""[build]
   publish = "."
 
