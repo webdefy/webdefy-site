@@ -97,7 +97,7 @@ open(f"{OUT}/assets/favicon.svg", "w").write(mark("webdefy", 64).replace('<svg '
 
 urls = ["/", "/rewind", "/engagement-model", "/work", "/story", "/contact", "/privacy", "/terms"]
 open(f"{OUT}/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>https://webdefy.com{u}</loc><lastmod>2026-11-27</lastmod></url>\n" for u in urls) + "</urlset>\n")
-open(f"{OUT}/robots.txt", "w").write("User-agent: *\nAllow: /\nDisallow: /thanks/\n\nSitemap: https://webdefy.com/sitemap.xml\n")
+open(f"{OUT}/robots.txt", "w").write("User-agent: *\nAllow: /\nDisallow: /thanks\n\nSitemap: https://webdefy.com/sitemap.xml\n")
 open(f"{OUT}/llms.txt", "w").write("""# Webdefy
 
 > Webdefy is a remote, AI-first studio, started in Chennai in 2012 by Maharaj, Mohanavigneshwaran and Russel. Its first AI product for everyone is Rewind.
