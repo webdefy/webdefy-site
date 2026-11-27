@@ -27,3 +27,5 @@ img { max-width: 100%; height: auto; }
 .ws-form { display: grid; gap: 16px; max-width: 560px; }
 .ws-form .wd-btn { justify-self: start; }
 @media (max-width: 520px) { .ws-nav { gap: 12px; } .ws-nav a { font-size: 14px; } .ws-legal h1 { font-size: 38px; line-height: 42px; } }
+.wd-footer__links nav[aria-label="Footer"] a { color: var(--ink); font-weight: 500; }
+.wd-footer__links nav[aria-label="Footer"] a:hover { color: var(--accent); }
