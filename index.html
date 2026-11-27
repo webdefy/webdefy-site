@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Webdefy: we grew up on the web. Now we rewind it.</title>
+<meta name="description" content="Webdefy builds AI products, starting with Rewind: the internet you grew up with, one year at a time. Plus governed AI rollout for business.">
+<link rel="canonical" href="https://webdefy.com/">
+<meta property="og:title" content="Webdefy: we grew up on the web. Now we rewind it.">
+<meta property="og:description" content="Webdefy builds AI products, starting with Rewind: the internet you grew up with, one year at a time. Plus governed AI rollout for business.">
+<meta property="og:url" content="https://webdefy.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#16151a">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Geist-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/InstrumentSerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/components.css">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+body { margin: 0; }
+.wh-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+.wh-hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; align-items: center; }
+.wh-phone { justify-self: center; }
+.wh-main { --wh-inset: 40px; }
+.wh-main .wd-leaf { padding-left: calc(var(--wh-inset) - 12px); padding-right: calc(var(--wh-inset) - 12px); }
+.wh-main .wd-leaf--hero { padding-left: calc(var(--wh-inset) - 14px); padding-right: calc(var(--wh-inset) - 14px); }
+.wh-main .wh-panel { padding-left: calc(var(--wh-inset) - 1px); padding-right: calc(var(--wh-inset) - 1px); }
+.wd-footer__line { white-space: pre-line; }
+.wh-snap { display: none; }
+.wd-btn.wh-icon-btn { display: inline-flex; align-items: center; justify-content: center; }
+.wh-rw { display: grid; grid-template-columns: minmax(0, 1fr); }
+.wh-tag.wh-tag--ink { color: var(--ink); border-color: var(--line-strong); }
+.wh-tag { font-family: var(--font-mono); font-size: 13px; line-height: 20px; letter-spacing: 0.04em; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.7); border-radius: 999px; color: #FFFFFF; }
+.wh-row > section > * { flex: 1 1 auto; }
+.wh-row .wd-leaf { height: 100%; box-sizing: border-box; }
+.wh-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.wh-nav a { color: var(--ink); text-decoration: none; font: 500 15px/20px var(--font-sans); padding: 12px 4px; border-radius: 8px; }
+.wh-nav a:hover { color: var(--accent); }
+.wh-nav a:focus-visible, .wh-link:focus-visible, .wh-brand:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wh-brand { text-decoration: none; color: var(--ink); }
+.wd-leaf__title, .wh-balance { text-wrap: balance; }
+.wd-leaf__title { white-space: pre-line; }
+.wh-link { color: var(--accent); font: 600 15px/20px var(--font-sans); text-decoration: none; }
+.wh-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.wd-leaf--hero .wd-leaf__title { font-size: 44px; line-height: 46px; white-space: pre-line; }
+.wh-crm .wd-leaf__title { font-size: 40px; line-height: 44px; white-space: pre-line; }
+.wd-btn.wh-block { width: 100%; box-sizing: border-box; }
+@media (min-width: 640px) {
+  .wh-wrap { padding: 0 32px; }
+  .wd-leaf--hero .wd-leaf__title { font-size: 56px; line-height: 56px; }
+  .wd-btn.wh-block { width: auto; }
+}
+@media (min-width: 960px) {
+  .wh-main { --wh-inset: 56px; }
+  .wh-wrap { padding: 0 48px; }
+  .wh-hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 56px; }
+  .wd-leaf--hero .wd-leaf__title { font-size: 72px; line-height: 68px; }
+  .wh-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: stretch; }
+  .wh-snap { display: flex; }
+  .wh-rw { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .wh-rw__copy { padding: 56px 56px !important; }
+}
+
+.wb-sheet { position: fixed; z-index: 50; right: 24px; bottom: 24px; width: 380px; max-width: calc(100vw - 32px); height: 560px; max-height: calc(100vh - 48px);
+  display: flex; flex-direction: column; border-radius: 24px; background: var(--surface); color: var(--ink); border: 1px solid var(--line-strong);
+  box-shadow: -6px 6px 0 var(--ink); overflow: hidden; font-family: var(--font-sans); }
+@media (max-width: 639px) { .wb-sheet { right: 16px; left: 16px; bottom: 16px; width: auto; height: 70vh; } }
+.wb-head { display: flex; align-items: center; gap: 12px; padding: 16px 16px 16px 20px; border-bottom: 1px solid var(--line); }
+.wb-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--amber); flex: none; }
+.wb-x { margin-left: auto; width: 40px; height: 40px; border-radius: 12px; border: 0; background: transparent; color: var(--ink); font-size: 22px; cursor: pointer; }
+.wb-x:focus-visible, .wb-chip:focus-visible, .wb-send:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wb-log { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.wb-msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 15px; line-height: 22px; }
+.wb-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 12px; }
+.wb-chip { height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font: 500 14px/20px var(--font-sans); cursor: pointer; }
+.wb-chip:hover { border-color: var(--ink); }
+.wb-form { display: flex; gap: 8px; padding: 12px 16px 16px; border-top: 1px solid var(--line); }
+.wb-input { flex: 1; height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface-alt); color: var(--ink); font: 400 15px/22px var(--font-sans); }
+.wb-send { height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: var(--amber); color: var(--ink-black); font: 600 15px/20px var(--font-sans); cursor: pointer; }
+.wb-foot { padding: 0 20px 14px; font-size: 13px; line-height: 18px; color: var(--ink-muted); }
+.wb-foot a { color: var(--accent); }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Webdefy", "url": "https://webdefy.com", "email": "hello@webdefy.com", "logo": "https://webdefy.com/assets/favicon.svg", "founder": [{"@type": "Person", "name": "Maharaj"}, {"@type": "Person", "name": "Mohanavigneshwaran"}, {"@type": "Person", "name": "Russel"}]}</script>
+</head>
+<body data-theme="webdefy">
+
+<div data-theme="webdefy" style="background: var(--surface); color: var(--ink); font-family: var(--font-sans); min-height: 100vh">
+<header class="wh-wrap" style="display: flex; align-items: center; justify-content: space-between; height: 72px">
+<a aria-label="webdefy home" class="wh-brand" href="#top" style="display: inline-flex; border-radius: 8px">
+<span aria-label="webdefy" class="wd-mark" role="img"><svg aria-hidden="true" height="32" style="display: block; flex-shrink: 0" viewbox="0 0 116 116" width="32"><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-edge)" transform="translate(0 16)"></path><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-leaf)" transform="translate(16 0)"></path><g transform="translate(16 0)"><path d="M36.13 77.53Q32.77 77.53 30.97 74.90Q29.16 72.28 30.31 67.77L36.87 43.00Q37.94 39.15 35.56 39.15Q33.84 39.15 32.16 41.61Q30.48 44.07 28.51 49.65Q28.18 50.63 27.36 50.63Q26.95 50.63 26.70 50.26Q26.46 49.89 26.62 49.32Q31.38 34.48 38.51 34.48Q41.30 34.48 42.28 36.77Q43.27 39.07 42.20 43.09L35.31 69.24Q34.58 72.03 35.23 73.34Q35.89 74.66 37.20 74.66Q41.22 74.66 46.18 64.77Q51.14 54.89 54.91 35.87Q55.16 34.97 56.06 34.97H59.26Q60.41 34.97 60.16 36.03L53.60 69.24Q53.03 71.95 53.72 73.30Q54.42 74.66 55.98 74.66Q58.36 74.66 60.82 72.36Q63.28 70.06 65.28 66.37Q67.29 62.68 68.52 58.26Q69.75 53.83 69.75 49.56Q69.75 46.12 69.22 44.11Q68.69 42.10 68.11 40.71Q67.54 39.31 67.54 37.67Q67.54 34.48 70.33 34.48Q72.30 34.48 72.87 36.65Q73.44 38.82 73.44 43.17Q73.44 49.40 71.93 55.51Q70.41 61.62 67.83 66.58Q65.24 71.54 61.92 74.53Q58.60 77.53 54.91 77.53Q51.39 77.53 49.50 74.78Q47.61 72.03 48.68 66.78Q48.84 66.21 48.47 66.13Q48.11 66.05 47.86 66.54Q45.56 71.13 42.69 74.33Q39.82 77.53 36.13 77.53Z" style="fill: var(--mark-glyph)"></path></g></svg><span class="wd-mark__word" style="font-size: 31px">webdefy</span></span>
+</a>
+<nav aria-label="Main" class="wh-nav" style="display: flex; gap: 20px">
+<a href="#rewind">Rewind</a>
+<a href="/story">Story</a>
+</nav>
+</header>
+<main class="wh-main" id="top">
+
+<section class="wh-wrap" id="rewind" style="padding-top: 16px; padding-bottom: 40px">
+<div class="wh-rw" data-theme="rewind" style="border-radius: 24px; background: var(--surface); border: 1px solid var(--line); overflow: hidden">
+<div aria-hidden="true" class="wh-snap" inert="true" style="background: var(--surface-alt); padding: 40px 24px 48px; align-items: center; justify-content: center">
+<div style="width: 211px; height: 438px; border-radius: 30px; padding: 8px; box-sizing: border-box; background: var(--ink-black); box-shadow: -10px 10px 0 var(--vermilion)">
+<div style="width: 195px; height: 422px; border-radius: 22px; overflow: hidden; position: relative">
+<div style="position: absolute; left: 0; top: 0; width: 390px; height: 844px; transform: scale(0.5); transform-origin: 0 0; pointer-events: none">
+<div aria-label="A year in Rewind, on a phone" class="ws-phone"><div class="ws-phone__screen" data-theme="rewind"><div class="ws-phone__bar"><svg aria-label="rewind" height="28" role="img" style="display: block; flex-shrink: 0" viewbox="0 0 116 116" width="28"><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-edge)" transform="translate(0 16)"></path><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-leaf)" transform="translate(16 0)"></path><g transform="translate(16 0)"><polygon points="23.0,50 48.0,30.0 48.0,70.0" stroke-linejoin="round" stroke-width="7" style="fill: var(--mark-glyph); stroke: var(--mark-glyph)"></polygon><polygon points="48.0,50 73.0,30.0 73.0,70.0" stroke-linejoin="round" stroke-width="7" style="fill: var(--mark-glyph); stroke: var(--mark-glyph)"></polygon></g></svg><span>Your Rewind</span></div><p class="ws-phone__year">2004</p><p class="ws-phone__age">You were 14.</p><p class="ws-phone__intro">2004 was loud. Facebook, Gmail and an unbeaten Arsenal.</p><article class="wd-story"><div class="wd-story__top"><span class="wd-story__date">FEB 2004</span><span class="wd-story__cat">INTERNET</span></div><p class="wd-story__event">Facebook launches at Harvard from a dorm room.</p></article><article class="wd-story"><div class="wd-story__top"><span class="wd-story__date">APR 2004</span><span class="wd-story__cat">INTERNET</span></div><p class="wd-story__event">Gmail opens with 1 GB of free storage.</p></article><article class="wd-story"><div class="wd-story__top"><span class="wd-story__date">MAY 2004</span><span class="wd-story__cat">ARSENAL</span></div><p class="wd-story__event">Arsenal finish the league season unbeaten: 26 wins, 12 draws.</p></article></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="wh-rw__copy" style="padding: 32px 24px; display: flex; flex-direction: column; justify-content: center; gap: 24px">
+<span aria-label="rewind" class="wd-mark" role="img"><svg aria-hidden="true" height="40" style="display: block; flex-shrink: 0" viewbox="0 0 116 116" width="40"><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-edge)" transform="translate(0 16)"></path><path d="M50,0 H100 V50 A50,50 0 0 1 50,100 H0 V50 A50,50 0 0 1 50,0 Z" style="fill: var(--mark-leaf)" transform="translate(16 0)"></path><g transform="translate(16 0)"><polygon points="23.0,50 48.0,30.0 48.0,70.0" stroke-linejoin="round" stroke-width="7" style="fill: var(--mark-glyph); stroke: var(--mark-glyph)"></polygon><polygon points="48.0,50 73.0,30.0 73.0,70.0" stroke-linejoin="round" stroke-width="7" style="fill: var(--mark-glyph); stroke: var(--mark-glyph)"></polygon></g></svg><span class="wd-mark__word" style="font-size: 39px">rewind</span></span>
+<h2 class="wh-balance" style="margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 46px; color: var(--ink)">Your internet, from past until now.</h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="font-family: var(--font-display); font-size: 26px; line-height: 32px; color: var(--ink)">Answer one question, find events that played a big part!</li>
+<li style="font-family: var(--font-display); font-size: 26px; line-height: 32px; color: var(--ink)">Real events collated for you by AI.</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px">
+<a class="wd-btn wd-btn--cta wh-block wh-icon-btn" href="/rewind"><svg aria-hidden="true" height="13" style="margin-right: 8px; opacity: 0.85; flex: none" viewbox="21 26 58 48" width="16"><polygon fill="currentColor" points="25,50 50,30 50,70" stroke="currentColor" stroke-linejoin="round" stroke-width="7"></polygon><polygon fill="currentColor" points="50,50 75,30 75,70" stroke="currentColor" stroke-linejoin="round" stroke-width="7"></polygon></svg>Start my Rewind</a>
+<span style="font-size: 14px; line-height: 20px; color: var(--ink-muted)">Browse for free. No signup unless you publish.</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wh-wrap" style="padding-bottom: 40px">
+<section class="wd-leaf wd-leaf--hero"><span class="wd-leaf__eyebrow">Webdefy · AI products</span><h1 class="wd-leaf__title">We grew up on the web.
+Now we rewind it.</h1><div class="wd-leaf__body">
+<p style="margin: 0; font-size: 18px; line-height: 28px; max-width: 620px">We specialise in AI for Business. Rewind is our first AI product for everyone. AI CRM is coming soon!</p>
+</div></section>
+</section>
+
+<section class="wh-wrap" id="rollout" style="padding-bottom: 40px">
+<div class="wh-panel" style="border-radius: 24px; background: var(--surface-alt); border: 1px solid var(--line); padding-top: 32px; padding-bottom: 32px">
+<p style="margin: 0 0 8px; font: 500 12px/16px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted)">Work with us</p>
+<h2 class="wh-balance" style="margin: 0 0 12px; font-family: var(--font-display); font-weight: 400; font-size: 40px; line-height: 44px; color: var(--ink)">Governed AI Rollout for Business</h2>
+<p style="margin: 0 0 20px; font-size: 18px; line-height: 28px; max-width: var(--reading-max); color: var(--ink)">We take AI from pilot to production for teams that answer to a regulator, test every step before it ships, keep a human in the loop, and govern before it hits a real user.</p>
+<ul aria-label="What we work with" style="list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+<li class="wh-tag wh-tag--ink">Agentic</li>
+<li class="wh-tag wh-tag--ink">LLM</li>
+<li class="wh-tag wh-tag--ink">RAG</li>
+<li class="wh-tag wh-tag--ink">MCP</li>
+<li class="wh-tag wh-tag--ink">Evals</li>
+</ul>
+<a class="wd-btn wd-btn--cta" href="mailto:hello@webdefy.com?subject=Talk%20to%20Webdefy">Talk to us</a>
+</div>
+</section>
+
+<section class="wh-wrap wh-crm" style="padding-bottom: 40px">
+<section class="wd-leaf wd-leaf--sub-a"><span class="wd-leaf__eyebrow">Coming soon</span><h2 class="wd-leaf__title">Every customer remembered.
+Every follow-up drafted.</h2><div class="wd-leaf__body">
+<p style="margin: 0 0 20px; font-size: 18px; line-height: 28px">AI CRM that uses machine learning and language models to automate manual tasks like logging interactions, summarizing histories, and drafting communications.</p>
+<form name="ai-crm-waitlist" method="POST" action="/thanks/" data-mailto style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-start">
+<label style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 6px">
+<input name="email" type="email" aria-describedby="wh-wait-note" aria-label="Work email" autocomplete="email" placeholder="you@company.com" required="true" style="height: 48px; padding: 0 16px; box-sizing: border-box; border-radius: 8px; border: 1px solid #FFFFFF; background: #FFFFFF; color: #16151A; font: 400 16px/24px var(--font-sans)" type="email" value=""/>
+</label>
+<button class="wd-btn wd-btn--cta" style="background: var(--amber); color: var(--ink-black); box-shadow: none" type="submit">Join the waitlist</button>
+</form>
+<p id="wh-wait-note" style="margin: 12px 0 0; font-size: 14px; line-height: 20px">One email when it opens. Nothing else.</p>
+</div></section>
+</section>
+
+<section class="wh-wrap" id="story" style="padding-bottom: 80px">
+<div class="wh-panel" style="border-radius: 24px; background: var(--surface-alt); border: 1px solid var(--line); padding-top: 32px; padding-bottom: 32px">
+<p style="margin: 0 0 8px; font: 500 12px/16px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted)">Who we were</p>
+<h2 class="wh-balance" style="margin: 0 0 12px; font-family: var(--font-display); font-weight: 400; font-size: 40px; line-height: 44px; color: var(--ink)">The internet began with one message in 1969</h2>
+<p style="margin: 0 0 20px; font-size: 18px; line-height: 28px; max-width: var(--reading-max); color: var(--ink)">We started building on it in 2012.</p>
+<ul aria-label="What we built" style="list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+<li class="wh-tag wh-tag--ink">Digital Apps</li>
+<li class="wh-tag wh-tag--ink">ECom</li>
+<li class="wh-tag wh-tag--ink">CRM</li>
+<li class="wh-tag wh-tag--ink">IoT</li>
+<li class="wh-tag wh-tag--ink">Analytics</li>
+<li class="wh-tag wh-tag--ink">Platforms</li>
+</ul>
+<a class="wh-link" href="/story">Read the story →</a>
+</div>
+</section>
+</main>
+<div class="wh-wrap" style="padding-bottom: 32px">
+<footer class="wd-footer" data-theme="webdefy-dark"><div class="wd-footer__top"><img alt="" class="wd-footer__faces" src="assets/img/faces.svg"/><div><p class="wd-footer__line">We started young &amp; creative.
+We choose to stay the same.</p><div class="wd-footer__meta">Remote, worldwide</div></div></div><div class="wd-footer__links"><nav aria-label="Footer"><a href="#rewind">Rewind</a><a href="/work">Work</a><a href="/story">Story</a><a href="/work-with-us">Work with us</a><a href="/contact">Contact</a></nav><nav aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></nav></div></footer>
+
+</div>
+</div>
+
+<script src="assets/forms.js" defer></script>
+</body>
+</html>

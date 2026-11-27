@@ -1,0 +1,16 @@
+# Webdefy
+
+> Webdefy is a remote, AI-first studio, started in Chennai in 2012 by Maharaj, Mohanavigneshwaran and Russel. Its first AI product for everyone is Rewind.
+
+## Products
+- [Rewind](https://webdefy.com/rewind): the internet you grew up with, one year at a time, turned into one good thing to do this week. Opens in early 2027.
+- AI CRM: coming soon.
+- AI E-com: coming soon.
+
+## Services
+- [Governed AI Rollout for Business](https://webdefy.com/work-with-us): agentic systems, LLMs, RAG, MCP and evals, taken from pilot to production with a human in the loop.
+
+## Company
+- [Story](https://webdefy.com/story)
+- [Work](https://webdefy.com/work): apps, websites, CRM and e-commerce platforms built for clients.
+- [Contact](https://webdefy.com/contact): hello@webdefy.com
